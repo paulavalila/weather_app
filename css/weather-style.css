@@ -1,0 +1,65 @@
+.weather_app{
+    font-family: 'Open sans'
+}
+
+.weather_app--header{
+    padding-top: 70px;
+	font-size: 52pt;
+    text-align: center;
+	font-weight: bold;
+	padding: 15px, 0, 0, 0;
+	margin: 0;
+}
+
+.weather_app--content{
+    width: 800px;
+    margin: auto;
+}
+
+.weather_app--listing{
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    position: relative;
+}
+
+.weather_app--customer_info_text{
+    font-size: 0.9em;
+    height: 30px;
+    padding: 0;
+}
+
+.weather_app--form{
+    width: 200px;
+    margin: auto
+}
+
+.weather_app--select-label{
+    display: block;
+    float: left;
+    font-style: italic;
+    font-size: 0.8em
+}
+
+.weather_app--select{
+    height: 25px;
+    width: 100%;
+    margin-bottom: 5px
+}
+
+.weather_app--clearList{
+    position: absolute;
+    right: 10px
+}
+
+ul, li{
+    list-style-type: none;
+    font-weight: 600
+}
+
+a{
+    text-decoration: none;
+    font-size: 0.8em;
+    font-weight: 600;
+    margin-top: 20px
+}

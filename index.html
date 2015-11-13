@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="weatherApp">
+<head>
+<meta charset="UTF-8">
+<title>WEATHER APP</title>
+<script src="/node_modules/angular/angular.js"></script>
+<script type="text/javascript" src="/js/demo.js"></script>
+<script type="text/javascript" src="/js/myApiKey.js"></script>
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+<link rel="stylesheet" type="text/css" href="/css/weather-style.css" />
+</head>
+<body ng-controller="weatherAppController" class="weather_app">
+<h1 class="weather_app--header">{{weatherHeader}}</h1>
+<div class="weather_app--content">
+    <div class="weather_app--listing">
+        <p class="weather_app--customer_info_text">{{infoText}}</p>
+        <form name="weatherForm" class="weather_app--form">
+            <label class="weather_app--select-label" for="citySelect">{{choose}}: </label>
+            <select class="weather_app--select" name="citySelect" id="citySelect" ng-model="data.citySelect" ng-change="getWeatherData(data.citySelect)"> 
+                <option ng-repeat="city in data.cityOptions" value="{{city}}">{{city.name}}</option>
+            </select>
+         </form>
+         <hr>
+         <div class="weather_app--clearList"><a ng-click="clearWeatherList()" ng-show="showClearListButton">Clear list</a></div>
+        <div class="weather_app--list_of_cities"><li ng-repeat="item in weatherArray | reverse"><p>{{item.city}}</p><p>{{item.temperature}} &#8451;</p><p><img ng-src="{{item.weatherImg}}" title={{item.weatherInfoTitle}} /></p></li></div>
+     </div>
+</div>
+
+</body>
+</html>
